@@ -1,0 +1,343 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 3.5fr;
+    grid-template-rows: .7fr 4fr .4fr;
+    height: 100vh;
+}
+header{
+    grid-column: 1/3;
+    grid-row: 1/2;
+    background-color: #333;
+    color: white;
+    padding-left: 1.5em;
+    display: flex;
+    align-items: center;
+}
+footer{
+    background-color: #333;
+    grid-column: 1/3;
+    grid-row: 3/4;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header > img{
+    width: 3rem;
+    height: 3rem;
+    padding-right: .6em;
+}
+.side{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background-color: #ddd;
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    padding: 1em 0 0 2em;
+}
+.side .sideitems > button{
+    background-color: transparent;
+    border: none;
+    font-size: larger;
+    font-weight: 400;
+    padding-left: .6rem;
+}
+main{
+    background-color: #eee;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    padding-left: 5rem;
+}
+.sideitems{
+    display: flex;
+    padding: .5em;
+}
+.project{
+    display: none;
+}
+.project.active{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.project input{
+    width: 200px;
+    height: 30px;
+    padding: .4em;
+    border: .6px solid rgb(189, 182, 182);
+    border-radius: 5px;
+    color: #333;
+}
+.project input:focus{
+    outline: none;
+}
+.project div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.project div button {
+    border-radius: 10px;
+    height: 40px;
+    width: 100px;
+    border: none;
+}
+.inputcontainer, .btninputcontainer, [class*="btninputcontainer"]{
+    display: none;
+}
+[class*="btninputcontainer"].active {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.inputcontainer.active{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+/*.btninputcontainer.active{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}*/
+.inputcontainer input{
+    width: 800px;
+    height: 30px;
+    padding: .4em;
+    border: .6px solid rgb(189, 182, 182);
+    border-radius: 5px;
+    color: #333;
+}
+[class*="btninputcontainer"] input{
+    width: 800px;
+    height: 30px;
+    padding: .4em;
+    border: .6px solid rgb(189, 182, 182);
+    border-radius: 5px;
+    color: #333;
+}
+/*.btninputcontainer input{
+    width: 800px;
+    height: 30px;
+    padding: .4em;
+    border: .6px solid rgb(189, 182, 182);
+    border-radius: 5px;
+    color: #333;
+}*/
+.inputcontainer input:focus{
+    outline: none;
+}
+/*.btninputcontainer input:focus{
+    outline: none;
+}*/
+[class*="btninputcontainer"] input:focus{
+    outline: none;
+}
+.inputcontainer div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+/*.btninputcontainer div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}*/
+[class*="btninputcontainer"] div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.inputcontainer div button {
+    border-radius: 10px;
+    height: 40px;
+    width: 400px;
+    border: none;
+    background-color: #ddd;
+}
+/*.btninputcontainer div button{
+    border-radius: 10px;
+    height: 40px;
+    width: 400px;
+    border: none;
+    background-color: #ddd;
+}*/
+[class*="btninputcontainer"] div button{
+    border-radius: 10px;
+    height: 40px;
+    width: 400px;
+    border: none;
+    background-color: #ddd;
+}
+
+.container, .btncontainer, [class*="btncontainer"] {
+    display: flex;
+    flex-direction: column;
+}
+.buttoncontainer, .btnbuttoncontainer, [class*="btnbuttoncontainer"] {
+    display: flex;
+    width: auto;
+}
+.buttoncontainer button{
+    background-color: transparent;
+    border: none;
+    font-size: larger;
+    font-weight:400;
+}
+.btnbuttoncontainer button{
+    background-color: transparent;
+    border: none;
+    font-size: larger;
+    font-weight:400;
+}
+[class*="btnbuttoncontainer"] button{
+    background-color: transparent;
+    border: none;
+    font-size: larger;
+    font-weight:400;
+}
+.buttoncontainer:hover{
+    background-color: #ccc;
+    width: 810px;
+    border-radius: 5px;
+    padding-left: .3rem;
+    margin: .4rem;
+}
+.taskdiv, .btntaskdiv, [class*="btntaskdiv"] {
+    width: 800px;
+}
+.tododiv, .btntododiv, [class*="btntododiv"]{
+    display: flex;
+    align-items: center;
+    /*justify-content: space-between;*/
+    padding: 0 5px 0 5px;
+    max-width: 800px;
+}
+.tododiv:hover{
+    background-color: #ddd;
+    border-radius: 10px;
+
+}
+.btntododiv:hover{
+    background-color: #ddd;
+    border-radius: 10px;
+}
+[class*="btntododiv"]:hover{
+    background-color: #ddd;
+    border-radius: 10px;
+}
+.rightside, .btnrightside, [class*="btnrightside"]{
+    padding: 0 2em 0 35em;
+    display: flex;
+    align-items: center;
+}
+.leftside, .btnleftside, [class*="btnleftside"]{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+ .unchecked{
+    width: 13px;
+    height: 13px;
+    border: solid 2px #374958;
+    border-radius: 50%;
+    margin-right: 8px;
+    margin-top: 0px;
+    flex-shrink: 0;
+}
+.btnunchecked{
+    width: 13px;
+    height: 13px;
+    border: solid 2px #374958;
+    border-radius: 50%;
+    margin-right: 8px;
+    margin-top: 0px;
+    flex-shrink: 0;
+}
+[class*="btnunchecked"]{
+    width: 13px;
+    height: 13px;
+    border: solid 2px #374958;
+    border-radius: 50%;
+    margin-right: 8px;
+    margin-top: 0px;
+    flex-shrink: 0;
+}
+.checked{
+    background-image: url(images/checkmark.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-color: white;
+    border-color: #2abd67;
+}
+.tododiv button {
+    background-color: transparent;
+    border: none;
+}
+.btntododiv button{
+    background-color: transparent;
+    border: none;
+}
+[class*="btntododiv"] button{
+    background-color: transparent;
+    border: none;
+}
+.makeaddvisible{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.projectbuttoncontainer{
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.projectbuttoncontainer .projectbtndiv{
+    padding-right: 10px;
+    background-color: transparent;
+    border:none;
+    display: flex;
+    /*justify-content: space-between;*/
+    align-items: center;
+    margin-right: 10px;
+}
+.projectbtndiv button{
+    background-color: transparent;
+    border:none;
+}
+.projectbuttoncontainer .projectbtndiv:hover{
+    background-color: #ccc;
+    border-radius: 5px;
+}
+.projectbuttoncontainer button div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.projectbuttoncontainer .projectbtndiv> .removeprojectbtn{
+    display: none;
+}
+.projectbuttoncontainer .projectbtndiv > .removeprojectbtn.active{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: larger;
+    font-weight: 900;
+}
+.projectbtndiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.removetodobtn{
+    font-size: larger;
+    font-weight: 900;
+}
+
